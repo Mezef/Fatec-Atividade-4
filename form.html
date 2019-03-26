@@ -38,7 +38,27 @@
 				<div class="col-12 col-md-6 text-justify">
 					<h2>Tendências de T.I. segundo a Gartner em 2019.</h2>
 
-					
+					<div class="card">
+						<div class="card-header">Formulário</div>
+
+							<div class="card-body">
+								<form name="formulario" id="formulario" action="" method="post" onsubmit="return validar()">
+						            <!-- Comando for="" serve para direcionar para o textbox assim que clicar no label-->
+						            <label for="nome">Nome Completo:</label>
+						            <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" class="form-control">
+						            <br><br>
+						            <label for="email">E-mail</label>
+						            <input type="text" name="email" id="email" placeholder="Digite um e-mail válido" class="form-control">
+						            <br><br>
+						            <label for="duvidas">Dúvidas</label>
+						            <textarea type="number" name="duvidas" id="duvidas" placeholder="Use esse campo para descrever suas dúvidas" class="form-control"></textarea> 
+						            <br><br>
+						            <input class="btn btn-primary" type="submit" value="Enviar" name="enviar" id="enviar"/>
+						         	</form>
+						    </div>
+						</div>						
+					</div>
+
 				<footer class="row no-gutters">
             		<!--FOOTER C-->
                 		<div class="col-12 col-md-6 footer_copy text-center" id="footerc">
