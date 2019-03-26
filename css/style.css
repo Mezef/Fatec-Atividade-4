@@ -1,7 +1,4 @@
 .top {
   background-color: #f1f3f7;
-}
-
-.top-right {
-	float: right;
+  align-items: center;
 }
