@@ -3,7 +3,13 @@
 }
 
 #tope img {
-	height: 150px;
+	margin-left: 100px;
+	margin-right: 10px;
+	height: 200px;
+}
+
+#body {
+	margin-left: 400px;
 }
 
 #footerd img {
