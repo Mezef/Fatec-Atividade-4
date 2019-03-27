@@ -10,6 +10,32 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<script src="js/bootstrap.js" type="text/javascript"></script>
 	<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+	<script src="js/jquery.validate.min.js" type="text/javascript"></script>
+	<script src="js/additional-methods.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+                        $("#formulario").validate({
+                            rules: {
+                                nome: {
+                                    required: true,
+                                    minlength: 10,
+                                    maxlength: 100
+                                },
+                                email: {
+                                	required: true,
+                                	email: true
+                                },
+                                duvidas: {
+                                	required: true,
+                                	maxlength: 400
+                                }
+                            },
+                            submitHandler: function(form){
+                                alert("Cadastrado com sucesso!")
+                            }
+                        })
+                    })
+	</script>
 </head>
 
 <body>
@@ -35,51 +61,49 @@
 		<!--BODY B-->
 		<div id="body">
 			<section class="row">
-				<div class="col-12 col-md-6 text-justify">
+				<div class="col-12 col-md-12 text-justify">
 					<h2>Tendências de T.I. segundo a Gartner em 2019.</h2>
 
 					<div class="card">
-						<div class="card-header">Formulário</div>
+						<div class="card-header">
+							Dúvidas
+						</div>
 
 							<div class="card-body">
-								<form name="formulario" id="formulario" action="" method="post" onsubmit="return validar()">
-						            <!-- Comando for="" serve para direcionar para o textbox assim que clicar no label-->
+								<form name="formulario" id="formulario" method="post">
+						            <div class="form-group">
 						            <label for="nome">Nome Completo:</label>
 						            <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" class="form-control">
-						            <br><br>
+						            </div>
+						            <div class="form-group">
 						            <label for="email">E-mail</label>
 						            <input type="text" name="email" id="email" placeholder="Digite um e-mail válido" class="form-control">
-						            <br><br>
+						            </div>
+						            <div class="form-group">
 						            <label for="duvidas">Dúvidas</label>
-						            <textarea type="number" name="duvidas" id="duvidas" placeholder="Use esse campo para descrever suas dúvidas" class="form-control"></textarea> 
-						            <br><br>
-						            <input class="btn btn-primary" type="submit" value="Enviar" name="enviar" id="enviar"/>
-						         	</form>
+						            <textarea type="text" name="duvidas" id="duvidas" placeholder="Use esse campo para descrever suas dúvidas" class="form-control"></textarea>
+						            </div>
+						            <input class="btn btn-primary" type="submit" value="Enviar"/>
+						        </form>
 						    </div>
 						</div>						
 					</div>
-
-				<footer class="row no-gutters">
-            		<!--FOOTER C-->
-                		<div class="col-12 col-md-6 footer_copy text-center" id="footerc">
-                   			Fatec Guaratinguetá - Linguagem de programação - Layout criado por Matheus Muniz para a atividade 4
-               			</div> 
-               		<!--FOOTER D-->
-                		<div class="col-12 col-md-6" id="footerd">
-                    		<a href="form.html">
-                        		<img class="img-responsive" src="fotos/faleconosco.png">                 
-                   			</a>
-                		</div>      
-            		</footer>     
-
 				</div>				
 			</section>
 		</div>
-
+			<footer class="row no-gutters">
+            		<!--FOOTER C-->
+                		<div class="col-12 col-md-6" id="footerc">
+                   			<p class="font-weight-light">Fatec Guaratinguetá - Linguagem de programação - Layout criado por Matheus Muniz para a atividade 4</p>
+               			</div> 
+               		<!--FOOTER D-->
+                		<div class="col-12 col-md-6 text-center" id="footerd">
+                        	<a class="btn btn-primary" href="form.html" role="button" id="faleconosco">
+		    				Fale Conosco
+		  					</a>                 
+                		</div>      
+            		</footer> 
 	</div>
-
-	<script src="js/bootstrap.js" type="text/javascript"></script>
-	<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
 
 </body>
 </html>
